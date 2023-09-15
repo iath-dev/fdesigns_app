@@ -5,18 +5,19 @@ class DiagonalHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final primary = Theme.of(context).colorScheme.primary;
+
     return SizedBox(
       height: double.infinity,
       width: double.infinity,
       child: CustomPaint(
-        painter: _HeaderDiagonalPainter(
-            color: Theme.of(context).colorScheme.primary),
+        painter: _HeaderDiagonalPainter(color: primary),
         child: SafeArea(
           child: Stack(
             children: [
               IconButton(
                   onPressed: () => Navigator.pop(context),
-                  icon: const Icon(Icons.arrow_back, color: Colors.white))
+                  icon: Icon(Icons.arrow_back, color: primary))
             ],
           ),
         ),
@@ -42,7 +43,8 @@ class _HeaderDiagonalPainter extends CustomPainter {
     final path = Path();
 
     // Paint with paint and path
-    path.lineTo(0, size.height);
+    path.moveTo(0, size.height);
+    path.lineTo(size.width, size.height);
     path.lineTo(size.width, 0);
 
     canvas.drawPath(path, paint);
