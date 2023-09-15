@@ -29,7 +29,7 @@ class _Content extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           physics: const BouncingScrollPhysics(),
           itemBuilder: (_, index) => _NavItem(route: routes[index]),
-          separatorBuilder: (_, __) => const SizedBox(height: 10),
+          separatorBuilder: (_, __) => const SizedBox(height: 8),
           itemCount: routes.length),
     );
   }
@@ -49,7 +49,9 @@ class _NavItem extends StatelessWidget {
       child: ListTile(
         onTap: () => Navigator.pushNamed(context, route.route),
         title: Text(route.label),
+        dense: true,
         leading: Icon(route.icon),
+        iconColor: Theme.of(context).colorScheme.primary,
         trailing: const Icon(Icons.chevron_right),
       ),
     );

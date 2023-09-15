@@ -1,4 +1,5 @@
 import 'package:fdesigns_app/src/models/route.dart';
+import 'package:fdesigns_app/src/screen/diagonal_screen.dart';
 import 'package:fdesigns_app/src/screen/screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,22 @@ class AppRoutes {
         route: "square",
         screen: const SquareScreen(),
         label: "Cuadrado",
-        icon: Icons.square_rounded)
+        icon: Icons.square_rounded),
+    NavItem(
+        route: "circle",
+        screen: const CircleScreen(),
+        label: "Circulo",
+        icon: Icons.circle),
+    NavItem(
+        route: "sharp",
+        screen: const SharpScreen(),
+        label: "Sharp",
+        icon: Icons.polyline),
+    NavItem(
+        route: "diagonal",
+        screen: const DiagonalScreen(),
+        label: "Diagonal",
+        icon: Icons.polyline_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
