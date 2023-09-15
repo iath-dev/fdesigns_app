@@ -42,23 +42,23 @@ class _WavesHeaderPainter extends CustomPainter {
     final path = Path();
 
     // Top
-    // path.lineTo(0, size.height * .25);
-    // path.quadraticBezierTo(size.width * .25, size.height * .30, size.width * .5,
-    //     size.height * .25);
-    // path.quadraticBezierTo(
-    //     size.width * .75, size.height * .20, size.width, size.height * .25);
-    // path.lineTo(size.width, size.height * .25);
-    // path.lineTo(size.width, 0);
+    path.lineTo(0, size.height * .25);
+    path.quadraticBezierTo(size.width * .25, size.height * .30, size.width * .5,
+        size.height * .25);
+    path.quadraticBezierTo(
+        size.width * .75, size.height * .20, size.width, size.height * .25);
+    path.lineTo(size.width, size.height * .25);
+    path.lineTo(size.width, 0);
 
-    final height = size.height;
-    final width = size.width;
+    // final height = size.height;
+    // final width = size.width;
 
-    // Bottom
-    path.moveTo(0, height);
-    path.lineTo(0, height * .8);
-    path.quadraticBezierTo(width * .25, height * .75, width * .5, height * .8);
-    path.quadraticBezierTo(width * .75, height * .85, width, height * .8);
-    path.lineTo(width, height);
+    // // Bottom
+    // path.moveTo(0, height);
+    // path.lineTo(0, height * .8);
+    // path.quadraticBezierTo(width * .25, height * .75, width * .5, height * .8);
+    // path.quadraticBezierTo(width * .75, height * .85, width, height * .8);
+    // path.lineTo(width, height);
 
     canvas.drawPath(path, paint);
   }
