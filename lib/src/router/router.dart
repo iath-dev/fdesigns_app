@@ -1,5 +1,5 @@
 import 'package:fdesigns_app/src/models/route.dart';
-import 'package:fdesigns_app/src/screen/home_screen.dart';
+import 'package:fdesigns_app/src/screen/screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -10,6 +10,15 @@ class AppRoutes {
       route: "home",
       screen: const HomeScreen(),
     ),
+    ...menu
+  ];
+
+  static final menu = <NavItem>[
+    NavItem(
+        route: "square",
+        screen: const SquareScreen(),
+        label: "Cuadrado",
+        icon: Icons.square_rounded)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
