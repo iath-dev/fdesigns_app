@@ -35,6 +35,11 @@ class AppRoutes {
         screen: const DiagonalScreen(),
         label: "Diagonal",
         icon: Icons.polyline_outlined),
+    NavItem(
+        route: "pick",
+        screen: const PickScreen(),
+        label: "Pico",
+        icon: Icons.edit),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
