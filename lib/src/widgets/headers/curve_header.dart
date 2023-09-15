@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PickHeader extends StatelessWidget {
-  const PickHeader({Key? key}) : super(key: key);
+class CurveHeader extends StatelessWidget {
+  const CurveHeader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class PickHeader extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       child: CustomPaint(
-        painter: _PickHeaderPainter(color: primary),
+        painter: _CurveHeaderPainter(color: primary),
         child: SafeArea(
           child: Stack(
             children: [
@@ -26,10 +26,10 @@ class PickHeader extends StatelessWidget {
   }
 }
 
-class _PickHeaderPainter extends CustomPainter {
+class _CurveHeaderPainter extends CustomPainter {
   final Color color;
 
-  _PickHeaderPainter({super.repaint, required this.color});
+  _CurveHeaderPainter({super.repaint, required this.color});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -41,9 +41,11 @@ class _PickHeaderPainter extends CustomPainter {
 
     final path = Path();
 
-    path.lineTo(0, size.height * .3);
-    path.lineTo(size.width * .5, size.height * .35);
-    path.lineTo(size.width, size.height * .3);
+    path.lineTo(0, size.height * .25);
+    path.quadraticBezierTo(size.width * .5,
+        (size.height * .25) + (size.width * .5), size.width, size.height * .25);
+    // path.lineTo(size.width * .5, size.height * .255);
+    path.lineTo(size.width, size.height * .25);
     path.lineTo(size.width, 0);
 
     canvas.drawPath(path, paint);

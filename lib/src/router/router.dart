@@ -40,6 +40,11 @@ class AppRoutes {
         screen: const PickScreen(),
         label: "Pico",
         icon: Icons.edit),
+    NavItem(
+        route: "curve",
+        screen: const CurveScreen(),
+        label: "Curva",
+        icon: Icons.circle_outlined),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
