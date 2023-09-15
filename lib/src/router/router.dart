@@ -1,5 +1,4 @@
 import 'package:fdesigns_app/src/models/route.dart';
-import 'package:fdesigns_app/src/screen/diagonal_screen.dart';
 import 'package:fdesigns_app/src/screen/screen.dart';
 import 'package:flutter/material.dart';
 
@@ -45,6 +44,11 @@ class AppRoutes {
         screen: const CurveScreen(),
         label: "Curva",
         icon: Icons.circle_outlined),
+    NavItem(
+        route: "waves",
+        screen: const WavesScreen(),
+        label: "Holas",
+        icon: Icons.waves),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
