@@ -10,10 +10,11 @@ class AppRoutes {
       route: "home",
       screen: const HomeScreen(),
     ),
-    ...menu
+    ...headerMenu,
+    ...animationMenu
   ];
 
-  static final menu = <NavItem>[
+  static final headerMenu = <NavItem>[
     NavItem(
         route: "square",
         screen: const SquareScreen(),
@@ -47,8 +48,21 @@ class AppRoutes {
     NavItem(
         route: "waves",
         screen: const WavesScreen(),
-        label: "Holas",
+        label: "Waves",
         icon: Icons.waves),
+  ];
+
+  static final animationMenu = <NavItem>[
+    NavItem(
+        route: 'animation',
+        screen: const AnimationScreen(),
+        icon: Icons.video_label,
+        label: 'Animaciones'),
+    NavItem(
+        route: 'animation-square',
+        screen: const AnimationSquareScreen(),
+        icon: Icons.video_label,
+        label: 'Cuadrado Animado'),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
