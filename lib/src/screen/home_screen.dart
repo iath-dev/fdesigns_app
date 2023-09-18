@@ -24,8 +24,8 @@ class _Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final routes = AppRoutes.headerMenu;
-    final animations = AppRoutes.animationMenu;
+    final routes = AppRoutes.routes['headers'];
+    final animations = AppRoutes.routes['animations'];
 
     return ListView(
       children: [
@@ -33,13 +33,13 @@ class _Content extends StatelessWidget {
           title: 'Headers',
         ),
         const SizedBox(height: 12),
-        _RoutesList(routes: routes),
+        _RoutesList(routes: routes as List<NavItem>),
         const SizedBox(height: 12),
         const _ListHeader(
           title: 'Animaciones',
         ),
         const SizedBox(height: 12),
-        _RoutesList(routes: animations),
+        _RoutesList(routes: animations as List<NavItem>),
       ],
     );
   }
