@@ -62,3 +62,19 @@ final List<NavItem> animationsHeaders = [
       icon: Icons.slideshow,
       label: 'SlideShow'),
 ];
+
+final List<NavItem> printRoutes = [
+  NavItem(
+      route: 'grid-view',
+      screen: GridViewScreen(),
+      icon: Icons.apps,
+      label: 'Grid View Printest')
+];
+
+final List<NavItem> emergencyRoutes = [
+  NavItem(
+      route: 'emergency',
+      screen: EmergencyScreen(),
+      icon: Icons.local_hospital,
+      label: 'Emergency')
+];

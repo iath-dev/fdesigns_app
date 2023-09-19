@@ -9,7 +9,9 @@ class AppRoutes {
   static final Map<String, List<RouteItem>> routes = {
     'root': [RouteItem(route: "home", screen: const HomeScreen())],
     'headers': headersRoutes,
-    'animations': animationsHeaders
+    'animations': animationsHeaders,
+    'print': printRoutes,
+    'emergency': emergencyRoutes
   };
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

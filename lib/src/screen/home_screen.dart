@@ -24,23 +24,16 @@ class _Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final routes = AppRoutes.routes['headers'];
-    final animations = AppRoutes.routes['animations'];
+    final routes = AppRoutes.routes.values.toList().sublist(1);
 
-    return ListView(
-      children: [
-        const _ListHeader(
-          title: 'Headers',
-        ),
-        const SizedBox(height: 12),
-        _RoutesList(routes: routes as List<NavItem>),
-        const SizedBox(height: 12),
-        const _ListHeader(
-          title: 'Animaciones',
-        ),
-        const SizedBox(height: 12),
-        _RoutesList(routes: animations as List<NavItem>),
-      ],
+    return ListView.separated(
+      itemCount: routes.length,
+      separatorBuilder: (context, index) => const Divider(
+        color: Colors.white,
+        thickness: 1,
+      ),
+      itemBuilder: (context, index) =>
+          _RoutesList(routes: routes[index] as List<NavItem>),
     );
   }
 }
