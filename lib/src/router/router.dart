@@ -6,12 +6,36 @@ import 'package:flutter/material.dart';
 class AppRoutes {
   static const String initialRoute = "home";
 
-  static final Map<String, List<RouteItem>> routes = {
-    'root': [RouteItem(route: "home", screen: const HomeScreen())],
+  static final Map<String, List<NavItem>> routes = {
+    'root': [
+      NavItem(
+          route: "home",
+          screen: const HomeScreen(),
+          label: "Home",
+          icon: Icons.home),
+      NavItem(
+          route: "animate",
+          screen: const AnimationsScreen(),
+          label: "Animaciones",
+          icon: Icons.play_circle),
+      NavItem(
+          route: "galley",
+          screen: const GridViewScreen(),
+          label: "Galería",
+          icon: Icons.image),
+      NavItem(
+          route: "emergency",
+          screen: const EmergencyScreen(),
+          label: "Emergencia",
+          icon: Icons.local_hospital),
+      NavItem(
+          route: "slivers",
+          screen: const SliverListScreen(),
+          label: "Lista de tareas",
+          icon: Icons.list),
+    ],
     'headers': headersRoutes,
-    'animations': animationsHeaders,
-    'print': printRoutes,
-    'emergency': emergencyRoutes
+    'animations': animationsHeaders
   };
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

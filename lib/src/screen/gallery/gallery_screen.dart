@@ -9,6 +9,7 @@ class GridViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text("Galería con GridView")),
       body: SafeArea(
         child: ChangeNotifierProvider(
           create: (_) => _UiModel(),

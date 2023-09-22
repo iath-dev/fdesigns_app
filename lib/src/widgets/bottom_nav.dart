@@ -50,12 +50,14 @@ class _NavBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).colorScheme;
+
     return Container(
       // width: 250,
       width: width,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: BoxDecoration(
-          color: Colors.white,
+          color: theme.background,
           borderRadius: BorderRadius.circular(50),
           boxShadow: const <BoxShadow>[
             BoxShadow(
