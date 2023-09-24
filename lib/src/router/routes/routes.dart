@@ -4,37 +4,37 @@ import 'package:flutter/material.dart';
 
 final List<NavItem> headersRoutes = [
   NavItem(
-      route: "square",
+      path: "square",
       screen: const SquareScreen(),
       label: "Cuadrado",
       icon: Icons.square_rounded),
   NavItem(
-      route: "circle",
+      path: "circle",
       screen: const CircleScreen(),
       label: "Redondo",
       icon: Icons.circle),
   NavItem(
-      route: "sharp",
+      path: "sharp",
       screen: const SharpScreen(),
       label: "Sharp",
       icon: Icons.polyline),
   NavItem(
-      route: "diagonal",
+      path: "diagonal",
       screen: const DiagonalScreen(),
       label: "Diagonal",
       icon: Icons.polyline_outlined),
   NavItem(
-      route: "pick",
+      path: "pick",
       screen: const PickScreen(),
       label: "Pico",
       icon: Icons.edit),
   NavItem(
-      route: "curve",
+      path: "curve",
       screen: const CurveScreen(),
       label: "Curva",
       icon: Icons.circle_outlined),
   NavItem(
-      route: "waves",
+      path: "waves",
       screen: const WavesScreen(),
       label: "Waves",
       icon: Icons.waves),
@@ -42,22 +42,22 @@ final List<NavItem> headersRoutes = [
 
 final List<NavItem> animationsHeaders = [
   NavItem(
-      route: 'animation',
+      path: 'animation',
       screen: const AnimationScreen(),
       icon: Icons.play_arrow,
       label: 'Animaciones'),
   NavItem(
-      route: 'animation-square',
+      path: 'animation-square',
       screen: const AnimationSquareScreen(),
       icon: Icons.play_circle,
       label: 'Cuadrado Animado'),
   NavItem(
-      route: 'radial-progress',
+      path: 'radial-progress',
       screen: const RadialProgressScreen(),
       icon: Icons.rotate_90_degrees_ccw,
       label: 'Progreso Radial'),
   NavItem(
-      route: 'slideshow',
+      path: 'slideshow',
       screen: const SlideShowScreen(),
       icon: Icons.slideshow,
       label: 'SlideShow'),

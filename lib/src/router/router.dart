@@ -9,27 +9,27 @@ class AppRoutes {
   static final Map<String, List<NavItem>> routes = {
     'root': [
       NavItem(
-          route: "home",
+          path: "home",
           screen: const HomeScreen(),
           label: "Home",
           icon: Icons.home),
       NavItem(
-          route: "animate",
+          path: "animate",
           screen: const AnimationsScreen(),
           label: "Animaciones",
           icon: Icons.play_circle),
       NavItem(
-          route: "galley",
+          path: "galley",
           screen: const GridViewScreen(),
           label: "Galería",
           icon: Icons.image),
       NavItem(
-          route: "emergency",
+          path: "emergency",
           screen: const EmergencyScreen(),
           label: "Emergencia",
           icon: Icons.local_hospital),
       NavItem(
-          route: "slivers",
+          path: "slivers",
           screen: const SliverListScreen(),
           label: "Lista de tareas",
           icon: Icons.list),
@@ -43,7 +43,7 @@ class AppRoutes {
     final routes$ = routes.values.expand((element) => element).toList();
 
     for (final option in routes$) {
-      appRoutes.addAll({option.route: (BuildContext context) => option.screen});
+      appRoutes.addAll({option.path: (BuildContext context) => option.screen});
     }
 
     return appRoutes;

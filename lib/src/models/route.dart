@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 
 class RouteItem {
-  final String route;
+  final String path;
   final Widget screen;
 
-  RouteItem({required this.route, required this.screen});
+  RouteItem({required this.path, required this.screen});
+
+  Route get route => PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => screen,
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          final curve =
+              CurvedAnimation(parent: animation, curve: Curves.easeInOut);
+
+          return SlideTransition(
+              position:
+                  Tween<Offset>(begin: const Offset(1.0, 0), end: Offset.zero)
+                      .animate(curve),
+              child: child);
+        },
+      );
 }
 
 class NavItem extends RouteItem {
@@ -12,7 +26,7 @@ class NavItem extends RouteItem {
   final String label;
 
   NavItem(
-      {required super.route,
+      {required super.path,
       required super.screen,
       required this.icon,
       required this.label});

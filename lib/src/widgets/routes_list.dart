@@ -34,7 +34,7 @@ class _RouteListItem extends StatelessWidget {
         title: Text(route.label),
         leading: Icon(route.icon, color: Theme.of(context).colorScheme.primary),
         trailing: const Icon(Icons.chevron_right),
-        onTap: () => Navigator.pushNamed(context, route.route),
+        onTap: () => Navigator.push(context, route.route),
       ),
     );
   }
