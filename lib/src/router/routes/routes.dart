@@ -61,4 +61,9 @@ final List<NavItem> animationsHeaders = [
       screen: const SlideShowScreen(),
       icon: Icons.slideshow,
       label: 'SlideShow'),
+  NavItem(
+      path: 'pie',
+      screen: const PieChartScreen(),
+      icon: Icons.pie_chart,
+      label: 'Pie Chart'),
 ];
